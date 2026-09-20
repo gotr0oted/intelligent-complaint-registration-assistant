@@ -1,0 +1,264 @@
+/* ==========================================================================
+   LAYOUT, GRID, NAVBAR & CONTAINER STYLES
+   ========================================================================== */
+
+.app-container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header & Navigation Bar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.5rem;
+  margin: 1rem 0;
+  border-radius: var(--radius-md);
+  position: sticky;
+  top: 0.75rem;
+  z-index: 100;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-glass);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-icon-wrapper {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  background: var(--brand-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.brand-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brand-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+  background: #eff6ff;
+  color: var(--brand-primary);
+  border: 1px solid #bfdbfe;
+}
+
+/* Navigation Links / Tabs */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--bg-tertiary);
+  padding: 0.3rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-glass);
+}
+
+.nav-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 1rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-tab-btn:hover {
+  color: var(--text-main);
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.nav-tab-btn.active {
+  color: #ffffff;
+  background: var(--brand-primary);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.theme-toggle-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-glass);
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.theme-toggle-btn:hover {
+  color: var(--text-main);
+  border-color: var(--border-glass-hover);
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 1.5rem 1rem 1rem;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-full);
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #15803d;
+  margin-bottom: 0.85rem;
+}
+
+.hero-pill svg {
+  color: #15803d;
+}
+
+.hero-title {
+  font-size: 2.1rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+  color: var(--text-main);
+}
+
+.hero-title .gradient-text {
+  color: var(--brand-primary);
+  background: none;
+  -webkit-text-fill-color: initial;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Main Tab Viewports */
+.tab-content {
+  display: none;
+  animation: fadeIn 0.3s ease forwards;
+  padding-bottom: 3rem;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Dual Column Layout (Register Portal) */
+.citizen-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 1.5rem;
+}
+
+/* Tracking View Container */
+.tracker-container {
+  max-width: 880px;
+  margin: 1.5rem auto 0;
+}
+
+/* Admin Dashboard Grid Layout */
+.dashboard-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.analytics-split-row {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 1.5rem;
+}
+
+/* Footer */
+.app-footer {
+  margin-top: auto;
+  border-top: 1px solid var(--border-glass);
+  padding: 1.75rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text-subtle);
+  font-size: 0.85rem;
+}
+
+.footer-tags {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .citizen-grid {
+    grid-template-columns: 1fr;
+  }
+  .kpi-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .analytics-split-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.1rem;
+  }
+  .nav-links {
+    display: none; /* Can be toggled via mobile menu or scrollable */
+  }
+  .kpi-row {
+    grid-template-columns: 1fr;
+  }
+}

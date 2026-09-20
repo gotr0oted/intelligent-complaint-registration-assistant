@@ -1,71 +1,29 @@
 # SmartCivic AI
 
-An intelligent civic complaint registration and management system built with **Python, Gradio, and SQLite**.
+SmartCivic AI is a Python and Gradio civic complaint system. Citizens can describe a municipal issue, receive automatic category and urgency routing, submit a ticket, track its lifecycle, and co-sign active reports. Department staff get searchable queue analytics, status updates, and CSV export.
 
-## Features
+## Run locally
 
-- Register civic complaints in natural language
-- Automatic category and priority detection
-- Department & officer routing
-- Duplicate complaint detection
-- Complaint tracking with reference ID
-- Staff queue with search, filters & status updates
-- CSV export and persistent SQLite storage
-
-## Tech Stack
-
-- Python
-- Gradio
-- SQLite
-
-## Project Structure
-
-```text
-SmartCivic-AI/
-├── app.py
-├── complaints.db
-├── requirements.txt
-└── README.md
-```
-
-## Run Locally
-
-1. Install dependencies
-
-```bash
+```powershell
+cd "C:\Users\parth\.gemini\antigravity-ide\scratch\intelligent-complaint-system"
 python -m pip install -r requirements.txt
-```
-
-2. Run the application
-
-```bash
 python app.py
 ```
 
-3. Open the Gradio URL shown in the terminal (normally `http://127.0.0.1:7860`).
+Open the local Gradio URL printed in the terminal, normally `http://127.0.0.1:7860`.
 
-## Complaint Workflow
+## Included workflows
 
-```text
-Citizen
-   │
-   ▼
-Enter Complaint
-   │
-   ▼
-AI Analysis
-(Category • Priority • Routing)
-   │
-   ▼
-SQLite Database
-   │
-   ▼
-Track Complaint / Staff Queue
-```
+- Report intake with common-issue examples and live AI routing preview.
+- Category, priority, department, officer, landmark, urgency, and duplicate detection.
+- SQLite-backed complaint records that persist between launches.
+- Four-stage tracking: Registered, Assigned, In Progress, and Resolved.
+- Department queue filters, searchable registry, status updates, workload counts, and CSV export.
 
-## Author
+## Project files
 
-**Parth Pusadkar**
+- `app.py`: Gradio interface, classifier, persistence, tracking, analytics, and export.
+- `requirements.txt`: Python dependency list.
+- `complaints.db`: Created automatically on first launch with realistic demonstration tickets.
 
-B.Tech Computer Science & Engineering  
-Symbiosis Institute of Technology, Nagpur
+The project no longer uses the previous Node server or browser JavaScript implementation.
